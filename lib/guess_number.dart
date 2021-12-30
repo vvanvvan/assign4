@@ -7,7 +7,7 @@ void main() {
   while (true) {
     playGame();
     String? input;
-    var len = Game.myList.length;
+    var turn = Game.myList.length;
 
     do {
       stdout.write('Play again? (Y/N): ');
@@ -16,9 +16,9 @@ void main() {
 
     if (input.toLowerCase() == 'n') {
       print('╔════════════════════════════════════════');
-      print("║  You've played $len games");
+      print("║  You've played $turn games");
       print('╟────────────────────────────────────────');
-      for (int i = 0; i < len; i++) {
+      for (int i = 0; i < turn; i++) {
         print('║ 🚀 Game # ${i + 1} : ${Game.myList[i]} guesses');
       }
       break;
